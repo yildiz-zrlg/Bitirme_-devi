@@ -2,7 +2,7 @@
 """
 Created on Sun Jan 29 11:45:10 2023
 
-@author: yildi
+@author: yildiz
 """
 
 import numpy as np
@@ -14,9 +14,6 @@ from sklearn.metrics import accuracy_score, recall_score,f1_score,precision_scor
 from sklearn import preprocessing
 
 data=pd.read_excel("student_por.xlsx")
-# data.shape 
-# print(data.isnull().any())
-# print(data.isnull().sum())
 
 d = {'yes':1,'no':0}
 data['schoolsup']=data['schoolsup'].map(d)
@@ -61,14 +58,8 @@ d={0:0,
    5:2,6:2,7:2,8:2,9:2,
    10:3,11:3,12:3,13:3,14:3,
    15:4,16:4,17:4,18:4,19:4,20:4}
-data['G3']=data['G3'].map(d)
-# ceviri=data.transpose()
-# describe=data.describe()
-# info=ceviri.head(33)
-# print(ceviri.head(33))
-# print(data.transpose().describe())
 
-# print(data.dtypes)
+data['G3']=data['G3'].map(d)
 
 # plt.figure(figsize=(18,16))
 # sns.heatmap(data.corr(),annot=True)
