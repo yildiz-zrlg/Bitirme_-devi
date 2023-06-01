@@ -2,7 +2,7 @@
 """
 Created on Mon Apr 10 12:23:47 2023
 
-@author: yildi
+@author: yildiz
 """
 
 
@@ -69,11 +69,8 @@ data['G3']=data['G3'].map(d)
 describe=data.describe().T
 with open('describe.txt', 'w') as file:
     file.write(describe.to_string())
-# info=ceviri.head(33)
-# print(ceviri.head(33))
-print(describe)
 
-# print(data.dtypes)
+print(describe)
 
 # plt.figure(figsize=(18,16))
 # sns.heatmap(data.corr(),annot=True)
