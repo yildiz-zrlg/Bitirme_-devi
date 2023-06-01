@@ -2,7 +2,7 @@
 """
 Created on Thu May 25 11:58:37 2023
 
-@author: yildi
+@author: yildiz
 """
 
 
@@ -16,9 +16,6 @@ from sklearn import preprocessing
 from sklearn.feature_selection import RFE, RFECV
 
 data=pd.read_excel("student_por.xlsx")
-# data.shape 
-# print(data.isnull().any())
-# print(data.isnull().sum())
 
 d = {'yes':1,'no':0}
 data['schoolsup']=data['schoolsup'].map(d)
@@ -64,20 +61,12 @@ d={0:0,
    10:3,11:3,12:3,13:3,14:3,
    15:4,16:4,17:4,18:4,19:4,20:4}
 data['G3']=data['G3'].map(d)
-# ceviri=data.transpose()
-# describe=data.describe()
-# info=ceviri.head(33)
-# print(ceviri.head(33))
-# print(data.transpose().describe())
-
-# print(data.dtypes)
 
 # plt.figure(figsize=(18,16))
 # sns.heatmap(data.corr(),annot=True)
 # plt.show()
 # x=data.drop(['age','schoolsup','famsup','paid','activities','nursery','internet','romantic','sex','Mjob','Fjob',
 #  'reason','guardian','traveltime','absences','famrel','freetime','goout','Dalc','Walc','health','studytime','address','Medu','Fedu','Pstatus','famsize','G3'],axis=1)
-
 
 # y=data['G3']
 x=data.drop('G3',axis=1)
